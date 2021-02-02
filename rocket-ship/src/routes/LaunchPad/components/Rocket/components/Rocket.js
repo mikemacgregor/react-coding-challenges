@@ -5,6 +5,7 @@ export function FunctionalRocket() {
   const [initialLaunchTime] = useState(Date.now());
 
   return <RocketCore initialLaunchTime={initialLaunchTime} />;
+  
 }
 
 export class ClassRocket extends Component {

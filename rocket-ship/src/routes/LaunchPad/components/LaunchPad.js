@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { ClassRocket, FunctionalRocket } from './Rocket';
 import '../styles/_launchpad.scss';
 
+const MyRocket = React.memo(props => {
+  return <ClassRocket />
+});
+
 export default function LaunchPad() {
   const [rerenderCount, triggerRerender] = useState(0);
 
@@ -9,7 +13,7 @@ export default function LaunchPad() {
 
   return (
     <div className="launchpad">
-      <ClassRocket />
+      <MyRocket />
     </div>
   );
 }
